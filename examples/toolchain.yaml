@@ -1,0 +1,10 @@
+stages:
+  lint:
+    tools: [eslint]
+    run_on: all
+  test:
+    tools: [jest]
+    run_on: "*.ts"
+  e2e:
+    tools: [cypress]
+    run_on: 'title match "[e2e]"'
